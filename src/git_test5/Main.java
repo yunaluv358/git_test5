@@ -8,8 +8,9 @@ public class Main {
     static int[] createArray(int size, int minValue, int maxValue) {
         Random random = new Random();
         int[] a = new int[size];
+        int bound = maxValue - minValue + 1;
         for (int i = 0; i < a.length; ++i)
-            a[i] = random.nextInt(maxValue - minValue + 1) + 1;
+            a[i] = random.nextInt(bound) + 1;
         return a;
     }
 
@@ -19,4 +20,3 @@ public class Main {
         System.out.println(Arrays.toString(a));
     }
 }
-
